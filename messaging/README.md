@@ -35,9 +35,6 @@ This project requires the usage of environment variables to configure certain se
    MESSAGING_SERVICE_SID="MGxxxxxx"
    ```
 
-   TODO add messaging service here
-   Optional Have a WhatsApp Sender
-
 3. Save the changes to the `.env` file
 
 ## Usage
