@@ -3,7 +3,7 @@ Run this code to count all messages
 and calls from a given number
 
 Required: Add the number you want to look up
-Optional: Switch the data package
+Optional: Switch the other packages / fields
 Docs: https://www.twilio.com/docs/lookup/v2-api
 *************************************/
 require("dotenv").config()
