@@ -8,12 +8,11 @@ Required:
 Docs: 
  - https://www.twilio.com/docs/messaging/features/link-shortening#track-customer-engagement-with-click-events
 *************************************/
-require("dotenv").config()
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const ngrok = require('ngrok');
-
+const ngrok = require("ngrok");
 
 app.use(bodyParser.json());
 
@@ -37,8 +36,7 @@ app.post("/", async (req, res) => {
   res.json({});
 });
 
-
-(async function() {
+(async function () {
   const PORT = 4000;
   await app.listen(PORT);
   console.log(`Server is running on port ${PORT}`);

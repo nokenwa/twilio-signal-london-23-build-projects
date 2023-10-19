@@ -12,16 +12,16 @@ Docs:
  - https://www.twilio.com/docs/messaging/features/link-shortening/onboarding-guide
  - https://www.twilio.com/blog/how-to-schedule-and-track-marketing-campaigns
 *************************************/
-require("dotenv").config()
+require("dotenv").config();
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const apiKey = process.env.TWILIO_API_KEY;
 const apiSecret = process.env.TWILIO_API_SECRET;
 
-const client = require('twilio')(apiKey, apiSecret, { accountSid });
+const client = require("twilio")(apiKey, apiSecret, { accountSid });
 
 console.log(
-  `Initialized client with account sid ${process.env.TWILIO_ACCOUNT_SID}`
+  `Initialized client with account sid ${process.env.TWILIO_ACCOUNT_SID}`,
 );
 
 // Send a message with a shortened link

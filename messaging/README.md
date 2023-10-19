@@ -1,7 +1,6 @@
 # Messaging Build Session
 
-Introducing the "Messaging Build Session" repository, accompanying the dynamic and interactive session held during Signal London 2023! This repository serves as a comprehensive resource for developers seeking to enhance their messaging capabilities. 
-
+Introducing the "Messaging Build Session" repository, accompanying the dynamic and interactive session held during Signal London 2023! This repository serves as a comprehensive resource for developers seeking to enhance their messaging capabilities.
 
 ## Prerequisites
 
@@ -43,7 +42,7 @@ This project requires the usage of environment variables to configure certain se
 
 ## Usage
 
-### Look Up SMS Pumping Risk Score 
+### Look Up SMS Pumping Risk Score
 
 1. Open the file and replace the number `"+44 0000 0000"` with the desired phone number you want to look up.
 2. Run the code using the command `node scripts/lookup.js`. It will count the messages and calls from the specified phone number.

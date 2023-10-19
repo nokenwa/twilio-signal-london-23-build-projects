@@ -1,0 +1,22 @@
+{
+  "name": "twilio-signal-london-23-build-projects",
+  "version": "1.0.0",
+  "description": "Twilio DIY Build Sessions for Signal London 2023: Practical code samples and tutorials to build powerful communication solutions.",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokenwa/twilio-signal-london-23-build-projects.git"
+  },
+  "author": "Nathaniel Okenwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nokenwa/twilio-signal-london-23-build-projects/issues"
+  },
+  "homepage": "https://github.com/nokenwa/twilio-signal-london-23-build-projects#readme",
+  "devDependencies": {
+    "prettier": "3.0.3"
+  }
+}
