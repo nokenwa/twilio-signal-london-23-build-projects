@@ -1,9 +1,9 @@
 /************************************* 
-Run this code to count all messages 
-and calls from a given number
+Run this code to loop up details about 
+a phone number
 
 Required: Add the number you want to look up
-Optional: Switch the other packages / fields
+Optional: Look up other packages / fields
 Docs: https://www.twilio.com/docs/lookup/v2-api
 *************************************/
 require("dotenv").config();
