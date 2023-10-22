@@ -8,6 +8,6 @@ This is a collection of code samples, tutorials, and resources for the DIY build
 
 - Explore the [_Voice Intelligence Project_](./voice-intelligence) to discover how to enable and customize the Voice Intelligence feature for your Twilio applications. Gain insights, learn voice analytics, and unlock the full potential of your voice communications.
 
-- With the [_Segment Build Project_](./studio), developers are guided through the implementation of Segment into their websites. Learn how to leverage the power of Segment to collect, analyze, and utilize user data effectively.
+- With the [_Segment Build Project_](./segment), developers are guided through the implementation of Segment into their websites. Learn how to leverage the power of Segment to collect, analyze, and utilize user data effectively.
 
-- Experience the [_Studio Build Project_](./segment) and discover how Low/No Code tools can be seamlessly integrated with the technologies discussed. Explore the possibilities of building powerful workflows, automations, and communication experiences using Twilio Studio.
+- Experience the [_Studio Build Project_](./studio) and discover how Low/No Code tools can be seamlessly integrated with the technologies discussed. Explore the possibilities of building powerful workflows, automations, and communication experiences using Twilio Studio.
