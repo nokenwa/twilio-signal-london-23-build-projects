@@ -1,0 +1,19 @@
+{
+  "name": "voice-intelligence-breakout",
+  "version": "1.0.0",
+  "description": "Break out session for voice intelligence",
+  "main": "create-transcript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokenwa/twilio-signal-london-23-build-projects.git"
+  },
+  "author": "Kaelyn Chresfield",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "twilio": "^4.19.0"
+  }
+}
