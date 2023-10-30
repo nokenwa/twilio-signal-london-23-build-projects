@@ -37,7 +37,7 @@ Goal: Have a Studio Flow respond to a WhatsApp message with "Ahoy!" (we're start
 
 You're now looking at a blank Studio canvas. Check out the list of available Widgets on the right - you're looking for "Send Message". Create a new Send Message widget in your flow by dragging it into the canvas. Feel free to give it a better name than `send_message_1`, but note that there are some restrictions on what characters can go in a widget name. Imagine them to be like variable names and you won't go wrong, we'll see why that is later. Put "Ahoy!" (or anything else) in the Message Body field on the right and Save the widget config.
 
-All flow executions start in the red Trigger widget at the top. Drag the connector for "Incoming Message" to the dot in the top corner of your Send Message widget.
+All flow executions start in the red Trigger widget at the top. Drag the connector for "Incoming Message" to the dot in the top corner of the Send Message widget.
 
 It looks like you're done with the flow, but there's one more step - the big red Publish button at the top of the canvas. When you publish changes to a flow, new executions are sent to the new version without disrupting people who were halfway through the old flow. Graceful upgrades, no problem. Publish now.
 
@@ -49,7 +49,8 @@ To connect the flow to WhatsApp for testing, we'll use the [WhatsApp Sandbox](ht
 
 Side-quest complete - you can send a Hello to the WhatsApp Sandbox number and get back a cheerful Ahoy!
 
-todo: image.
+![WhatsApp Order]("./wa_ahoy_world.jpg")
+_Every Hello World is a milestone_
 
 ### Phase 2 :: Personalisation
 
@@ -61,9 +62,9 @@ We'll take the sender's number, look it up in our "customer database" and get ba
 
 Add a Make HTTP Request widget between the Trigger and Send Message. In the config for the HTTP widget, use [this URL](https://studio-signal-london-2023-6260.twil.io/phase_2) (you can load it in your browser too). Add an HTTP parameter, the `Key` needs to be `From` and in the `Value` field type `{{`. You'll see a drop down of every bit of data that this widget can read from the current execution. There's a lot there, and the one you're looking for is `trigger.message.From`.  Save the parameter, _and_ the widget config.
 
-To personalise the Send Message widget, change the text from `Ahoy!` to `Ahoy {{widgets.http_1.parsed.name}}!`. You'll get completion up to `parsed`.
+To personalise the Send Message widget, change the text from `Ahoy!` to `Ahoy {{widgets.http_1.parsed.customer.name}}!`. You'll get completion up to `parsed`.
 
-> Note: The "customer database" we're using is a [Twilio Function](https://www.twilio.com/docs/serverless/functions-assets/functions). So why don't we use the "Run Function" widget? Good question - it's because the function is not yours (it's mine). If you want to customise it you are welcome to, the code is [here (TODO!)]() and you're very welcome to use it.
+> Note: The "customer database" we're using is a [Twilio Function](https://www.twilio.com/docs/serverless/functions-assets/functions). So why don't we use the "Run Function" widget? Good question - it's because the function is not yours (it's mine). If you want to customise it you are welcome to, the code is [here]("./function_contents.js") and you're very welcome to use it.
 >
 > It would be very preferable to use Run Function here if we had more time, because my function is publicly available to anyone with an internet connection but Studio will sign requests so you can use [Protected visibility](https://www.twilio.com/docs/serverless/functions-assets/visibility#protected) to keep your customer data secure.
 
