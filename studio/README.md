@@ -43,7 +43,7 @@ It looks like you're done with the flow, but there's one more step - the big red
 
 > Note: You can [test a draft flow](https://www.twilio.com/docs/studio/user-guide#testing-draft-flows) without publishing.
 
-### Side Quest: The Twilio Sandbox for WhatsApp
+#### Side Quest: The Twilio Sandbox for WhatsApp
 
 To connect the flow to WhatsApp for testing, we'll use the [WhatsApp Sandbox](https://www.twilio.com/docs/whatsapp/sandbox). Follow the instructions there as far as sending the `join <your-sandbox-keyord>` section, then jump down to the [Reply to Incoming Messages](https://www.twilio.com/docs/whatsapp/sandbox#reply-to-incoming-messages-with-the-twilio-sandbox) section. That shows how to use a custom URL as a webhook for incoming messages. You can find the webhook URL of your flow if you click on the Trigger widget.
 
@@ -51,9 +51,9 @@ Side-quest complete - you can send a Hello to the WhatsApp Sandbox number and ge
 
 todo: image.
 
-## Phase 2 :: Personalisation
+### Phase 2 :: Personalisation
 
-The more you know about your customer and their needs, the better experience you'll be able to give them. Let's add a personal touch to the flow.
+Goal: The more you know about your customer and their needs, the better experience you'll be able to give them. Let's add a personal touch to the flow.
 
 Every widget in an an execution carries data which can be queried by widgets later in the flow. We'll see lots of examples later, but for now consider the Trigger widget - it holds data about the incoming message including the body, the senders number and so on.
 
@@ -69,7 +69,7 @@ To personalise the Send Message widget, change the text from `Ahoy!` to `Ahoy {{
 
 Save everything and publish again, then say Hello to your new personalised flow.
 
-### Optional Side Quest: Multi-language support
+#### Optional Side Quest: Multi-language support
 
 You now know enough to make a multilingual WhatsApp bot. If you deploy your own copy of the function, you could include in the response localised messages used by all subsequent widgets. A couple of hints if you want to try this:
  - You can call the [Lookup](https://www.twilio.com/docs/lookup) API from the function to tell what country a phone number is from.
@@ -78,6 +78,8 @@ You now know enough to make a multilingual WhatsApp bot. If you deploy your own 
 Learn how Twilio delivery partner [Zing](https://zing.dev/) scaled this approach to over 1 million WhatsApp messages a day in [this interview from SIGNAL 2022](https://twitch.tv/videos/1642341073).
 
 ### Phase 3 :: Back-and-Forth messaging, with branches
+
+Goal: Explore studio and make your flow bigger and better
 
 Now that you're familiar with the layout of the Studio canvas and the save/publish loop I'll drop the super-detailed instructions.
 
@@ -91,11 +93,11 @@ Change the flow so that if they have an open order you ask them if that's what t
 
 You can take this as far as you like during today's build session, but there is one more topic I want to cover:
 
-## Phase 4 :: Debugging and Logging
+### Phase 4 :: Debugging and Logging
 
 No runtime platform is fun to use unless it includes a way to help pinpoint errors and monitor usage. Studio has great solutions for both.
 
-### Debugging Your Flow
+#### Debugging Your Flow
 
 Over to the left of the Studio canvas is a menu which offers an enticing "Logs" option. In here you can find details of each execution of your flow. Click through on any of the executions to see a huge amount of detail about each of the Steps in the flow, and the Flow Data tab shows exactly what data each widget producted (privacy-minded folks [read this](https://www.twilio.com/docs/studio/user-guide#data-retention-in-studio)).
 
@@ -103,7 +105,7 @@ This is invaluable if your flow doesn't work like you thought it should while yo
 
 > Hint: large flows can generate a _lot_ of Flow Data. Use the [Set Variables Widget](https://www.twilio.com/docs/studio/widget-library/set-variables) to group important data and give meaningful names.
 
-### Logging and Monitoring
+#### Logging and Monitoring
 
 You might well be interested in keeping track of how often your flow is used, which paths are commonly taken, whether people drop off mid-conversation and if so, where?
 
@@ -126,4 +128,5 @@ This session has barely scratched the surface of what Studio can do - here's som
  - Sending an execution to Flex, for when you've detected that the caller needs human assistance
  - Connecting to a [Google Dialogflow CX Agent](https://cloud.google.com/dialogflow/cx/docs/concept/agent) using the [Connect Virtual Agent](https://www.twilio.com/docs/studio/widget-library/connect-virtual-agent) widget.
  - TODO: more extensions
- 
+
+Thanks for coming - I can't wait to see what you build with Studio!
