@@ -90,9 +90,11 @@ Change the flow so that if they have an open order you ask them if that's what t
  - The [Split Based On...](https://www.twilio.com/docs/studio/widget-library/split-based-on) widget can put branches in your flow.
  - The [Send & Wait For Reply](https://www.twilio.com/docs/studio/widget-library/send-wait-reply) widget does exactly what it sounds like. Use this to ask if they're messaging about their open order or not (and "Split Based On" the reply).
  - As a valued partycookies.store customer, would you prefer to read "Are you messaging about your open order?" or "Are you messaging about the ten peanut butter cookies you ordered last Thursday?"
- - Calling out to an LLM like ChatGPT is a really powerful way to categorize and summarize a message's intent.
+ - Calling out to an LLM like ChatGPT can be a really powerful way to categorize and summarize a message's intent.
 
-You can take this as far as you like during today's build session, we're here to help if you need it. But there is one more topic I want to cover:
+You can take this as far as you like during today's build session, we're here to help if you want to ask anything please do!
+
+There is one more topic I want to cover:
 
 ### Phase 4 :: Debugging and Logging
 
@@ -128,6 +130,6 @@ This session has barely scratched the surface of what Studio can do - here's som
  - [Subflows](https://www.twilio.com/docs/studio/subflows)
  - Sending an execution to Flex, for when you've detected that the caller needs human assistance
  - Connecting to a [Google Dialogflow CX Agent](https://cloud.google.com/dialogflow/cx/docs/concept/agent) using the [Connect Virtual Agent](https://www.twilio.com/docs/studio/widget-library/connect-virtual-agent) widget.
- - TODO: more extensions
+ - Voice Intelligence Automations can trigger flows once a transcription is complete and you can split the execution based which Operators matched during the call. This is the "Run Operator Inference" widget (you can see a demo at the Voice Intelligence booth at SIGNAL London)
 
 Thanks for coming - I can't wait to see what you build with Studio!
