@@ -24,7 +24,7 @@ If you're already comfortable writing code, you might be wondering what extra St
  - Studio handles concurrent executions safely, even during changes to the flow,
  - There's built-in widgets for lots of Twilio APIs
  - I can always call out to code for complex tasks from a Studio Flow
- - Studio handles multi-step voice and messaging flows natively. I have built enough state machines by hand.
+ - Studio handles multi-step voice and messaging flows natively. No need to build a state machine from scratch.
  - Enough helpful debugging and logging that I don't miss my dev tools.
 
  ## Let's get it started
@@ -86,12 +86,12 @@ Now that you're familiar with the layout of the Studio canvas and the save/publi
 You might have noticed that as well as the customer's name, the function returns details of any open orders they have with partycookies.store. In particular `orders.open_order_count` is always present in the response, and if that's greater than zero you will also get a summary in `orders.open_orders_summary`.
 
 Change the flow so that if they have an open order you ask them if that's what they're messaging about. Some ideas to help:
- - The [Split Based On...](https://www.twilio.com/docs/studio/widget-library/split-based-on) widget can put branches in your code.
+ - The [Split Based On...](https://www.twilio.com/docs/studio/widget-library/split-based-on) widget can put branches in your flow.
  - The [Send & Wait For Reply](https://www.twilio.com/docs/studio/widget-library/send-wait-reply) widget does exactly what it sounds like. Use this to ask if they're messaging about their open order or not (and "Split Based On" the reply).
  - As a valued partycookies.store customer, would you prefer to read "Are you messaging about your open order?" or "Are you messaging about the ten peanut butter cookies you ordered last Thursday?"
  - Calling out to an LLM like ChatGPT is a really powerful way to categorize and summarize a message's intent.
 
-You can take this as far as you like during today's build session, but there is one more topic I want to cover:
+You can take this as far as you like during today's build session, we're here to help if you need it. But there is one more topic I want to cover:
 
 ### Phase 4 :: Debugging and Logging
 
@@ -101,7 +101,7 @@ No runtime platform is fun to use unless it includes a way to help pinpoint erro
 
 Over to the left of the Studio canvas is a menu which offers an enticing "Logs" option. In here you can find details of each execution of your flow. Click through on any of the executions to see a huge amount of detail about each of the Steps in the flow, and the Flow Data tab shows exactly what data each widget producted (privacy-minded folks [read this](https://www.twilio.com/docs/studio/user-guide#data-retention-in-studio)).
 
-This is invaluable if your flow doesn't work like you thought it should while you're testing it. You can trace through every step and see where it didn't match your expectation.
+This is invaluable if your flow doesn't work like you think it should while you're testing it. You can trace through every step and see where it didn't match your expectation.
 
 > Hint: large flows can generate a _lot_ of Flow Data. Use the [Set Variables Widget](https://www.twilio.com/docs/studio/widget-library/set-variables) to group important data and give meaningful names.
 
