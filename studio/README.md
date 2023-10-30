@@ -41,7 +41,7 @@ All flow executions start in the red Trigger widget at the top. Drag the connect
 
 It looks like you're done with the flow, but there's one more step - the big red Publish button at the top of the canvas. When you publish changes to a flow, new executions are sent to the new version without disrupting people who were halfway through the old flow. Graceful upgrades, no problem. Publish now.
 
-> Note: You can [test a draft flow](https://www.twilio.com/docs/studio/user-guide#testing-draft-flows) without publishing.
+> Note: You can [test a draft flow](https://www.twilio.com/docs/studio/user-guide#testing-draft-flows) without publishing. Feel free to experiment.
 
 #### Side Quest: The Twilio Sandbox for WhatsApp
 
@@ -72,7 +72,7 @@ Save everything and publish again, then say Hello to your new personalised flow.
 #### Optional Side Quest: Multi-language support
 
 You now know enough to make a multilingual WhatsApp bot. If you deploy your own copy of the function, you could include in the response localised messages used by all subsequent widgets. A couple of hints if you want to try this:
- - You can call the [Lookup](https://www.twilio.com/docs/lookup) API from the function to tell what country a phone number is from.
+ - You can call the [Lookup API](https://www.twilio.com/docs/lookup) from the function to tell what country a phone number is from.
  - You can store each language's messages as [Function Assets](https://www.twilio.com/docs/serverless/functions-assets/assets), keeping your translation workflow outside of the code.
 
 Learn how Twilio delivery partner [Zing](https://zing.dev/) scaled this approach to over 1 million WhatsApp messages a day in [this interview from SIGNAL 2022](https://twitch.tv/videos/1642341073).
@@ -95,7 +95,7 @@ You can take this as far as you like during today's build session, we're here to
 
 ### Phase 4 :: Debugging and Logging
 
-No runtime platform is fun to use unless it includes a way to help pinpoint errors and monitor usage. Studio has great solutions for both.
+No runtime platform sparks joy unless it includes a way to help pinpoint errors and monitor usage. Studio has great solutions for both.
 
 #### Debugging Your Flow
 
