@@ -49,7 +49,7 @@ To connect the flow to WhatsApp for testing, we'll use the [WhatsApp Sandbox](ht
 
 Side-quest complete - you can send a Hello to the WhatsApp Sandbox number and get back a cheerful Ahoy!
 
-![WhatsApp Order]("./wa_ahoy_world.jpg")
+![WhatsApp Order]("wa_ahoy_world.jpg")
 _Every Hello World is a milestone_
 
 ### Phase 2 :: Personalisation
@@ -64,7 +64,7 @@ Add a Make HTTP Request widget between the Trigger and Send Message. In the conf
 
 To personalise the Send Message widget, change the text from `Ahoy!` to `Ahoy {{widgets.http_1.parsed.customer.name}}!`. You'll get completion up to `parsed`.
 
-> Note: The "customer database" we're using is a [Twilio Function](https://www.twilio.com/docs/serverless/functions-assets/functions). So why don't we use the "Run Function" widget? Good question - it's because the function is not yours (it's mine). If you want to customise it you are welcome to, the code is [here]("./function_contents.js") and you're very welcome to use it.
+> Note: The "customer database" we're using is a [Twilio Function](https://www.twilio.com/docs/serverless/functions-assets/functions). So why don't we use the "Run Function" widget? Good question - it's because the function is not yours (it's mine). If you want to customise it you are welcome to, the code is [here]("function_contents.js") and you're very welcome to use it.
 >
 > It would be very preferable to use Run Function here if we had more time, because my function is publicly available to anyone with an internet connection but Studio will sign requests so you can use [Protected visibility](https://www.twilio.com/docs/serverless/functions-assets/visibility#protected) to keep your customer data secure.
 
