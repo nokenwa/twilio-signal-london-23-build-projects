@@ -16,6 +16,8 @@ When setting up the "Connect Call To" widget, make sure call recording is toggle
 
 Publish your flow, assign it to a Twilio number, and you're ready to make your call!
 
+![Twilio Studio](https://twilio-cms-prod.s3.amazonaws.com/images/Call-Widget-Studio.width-1600.png)
+
 ## Create a Voice Intelligence service in the Twilio console
 Head to the Twilio console and navigate to [Voice Intelligence/Services](https://console.twilio.com/us1/develop/voice-intelligence/services). Create a new Service and give it a unique name.
 All selections when creating a service are optional.
