@@ -7,7 +7,7 @@ You have two options. You can:
 - Rebuild the Segment Demo from today's presentation! 
 
 
-## Self Guided Practical Excercise
+## Self Guided Practical Excercise - RECOMMENDED
 
 Imagine you're a developer for a marketplace called Anythink. One of your co-workers has a new task for you. Work through this story as you implement Twilio Segment for this fictional marketplace.
 
