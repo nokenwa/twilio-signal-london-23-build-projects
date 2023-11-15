@@ -4,14 +4,11 @@ For this breakout you will create a transcript for a pre-recorded phone call, ad
 
 <br>
 
-## Setup
+## Twilio Console Setup
 If you don't have a pre-recorded converation, create one with a friend or the person sitting next to you. If you're calling a friend outside of the room, we recommend giving them a headsup that the line will be recorded 😉
 
 ### Create a Twilio Account
-If you haven't done so already, [create a Twilio account](https://www.twilio.com/try-twilio) and navigate to the home page to find your Account Sid and Authorization Token.
-
-Head to the `add-your-credentials.env` file in this repository and add your account sid and authorization token to the enviornment variables.
-
+If you haven't done so already, [create a Twilio account](https://www.twilio.com/try-twilio) and navigate to the voice Intelligence page
 ### Record a call
 Follow this [blog](https://www.twilio.com/blog/make-receive-calls-twilio-number-using-studio) to buy a Twilio number and set up a call forwarding feature. This way your Twilio number will be the one contacting your partner. 
 
@@ -19,25 +16,28 @@ When setting up the "Connect Call To" widget, make sure call recording is toggle
 
 Publish your flow, assign it to a Twilio number, and you're ready to make your call!
 
-### Download your recording and upload to AWS S3 bucket
-In the left panel of the console at the top, select `Monitor` then `Call Recordings`. Click on the recording that you'd like to download and download the MP3.
-
-Once downloaded, head over to AWS, and [create a S3 bucket](https://s3.console.aws.amazon.com/s3/bucket/create) and add the recording as an object in the bucket.
-
-In your S3 bucket, select the recording object, click on the action drop down menu and select `Share with presigned URL`. Enter your desired expiration time, submit, then a confirmation should appear and the URL automatically copied to your clipboard.
-
-![Creating a presigned URL for an MP3 file hosted on ASW](https://image-for-london-signal-breakout-repo-4569.twil.io/Screen%20Shot%202023-10-26%20at%201.32.37%20PM.png)
-
-<br>
-
 ## Create a Voice Intelligence service in the Twilio console
 Head to the Twilio console and navigate to [Voice Intelligence/Services](https://console.twilio.com/us1/develop/voice-intelligence/services). Create a new Service and give it a unique name.
 All selections when creating a service are optional.
 
 After your service is created, select any prebuilt language operators provided by Twilio and create any language operators you'd like to include.
 
-## Repository instructions
-This is a Node.js project. Install the dependensies with this command in the root of the repository: 
+*Make sure you setup your service to transcribe all recorded calls*
+
+## Make a phone call and test your operator
+
+Make a phone call and say a few words. It does help to think about a use case to help you pick your operators. Then find your transcript in the Voice Intelligence Console
+
+## Stretch Goal
+
+Setup a webhook or Twilio Function to handle the information from the transcript once you're finished
+
+
+
+## Using the JavaScript API
+This is a Node.js project. Feel free to follow the [docs](https://www.twilio.com/docs/voice/intelligence/key-concepts) to use your preferred programming language
+
+Install the dependensies with this command in the root of the repository: 
 ```
 npm i --save
 ```
