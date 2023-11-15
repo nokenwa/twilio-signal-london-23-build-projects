@@ -4,12 +4,12 @@ For this breakout you will create a transcript for a pre-recorded phone call, ad
 
 <br>
 
-## Twilio Console Setup
+# Twilio Console Setup
 If you don't have a pre-recorded converation, create one with a friend or the person sitting next to you. If you're calling a friend outside of the room, we recommend giving them a headsup that the line will be recorded 😉
 
-### Create a Twilio Account
+## Create a Twilio Account
 If you haven't done so already, [create a Twilio account](https://www.twilio.com/try-twilio) and navigate to the voice Intelligence page
-### Record a call
+## Record a call
 Follow this [blog](https://www.twilio.com/blog/make-receive-calls-twilio-number-using-studio) to buy a Twilio number and set up a call forwarding feature. This way your Twilio number will be the one contacting your partner. 
 
 When setting up the "Connect Call To" widget, make sure call recording is toggled to the `ON` position.
@@ -36,7 +36,7 @@ Setup a webhook or Twilio Function to handle the information from the transcript
 
 
 
-## Using the JavaScript API
+# Using the JavaScript API
 This is a Node.js project. Feel free to follow the [docs](https://www.twilio.com/docs/voice/intelligence/key-concepts) to use your preferred programming language
 
 Install the dependensies with this command in the root of the repository: 
